@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram name="Modelo Estrela" id="LLGerSEOdCccHnRYdnu9">
+    <mxGraphModel dx="86918" dy="44131" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-8" edge="1" parent="1" source="zI98GzpI6hRYiZCz9xg3-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="zI98GzpI6hRYiZCz9xg3-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="140" />
+              <mxPoint x="50" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;" value="dim_date&#xa;----------------------&#xa;date_key (PK)&#xa;full_date&#xa;year&#xa;month&#xa;day&#xa;quarter&#xa;month_name" vertex="1">
+          <mxGeometry height="180" width="220" x="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="dim_country&#xa;----------------------&#xa;country_key (PK)&#xa;iso_code&#xa;country_name&#xa;population&#xa;gdp&#xa;start_date&#xa;end_date&#xa;is_current" vertex="1">
+          <mxGeometry height="220" width="220" x="540" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="dim_energy_source&#xa;----------------------&#xa;energy_source_key (PK)&#xa;energy_source_name" vertex="1">
+          <mxGeometry height="120" width="220" x="-70" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="fact_energy&#xa;----------------------&#xa;fact_key (PK)&#xa;date_key (FK)&#xa;country_key (FK)&#xa;energy_source_key (FK)&#xa;consumption&#xa;electricity&#xa;per_capita&#xa;share_electricity&#xa;share_energy&#xa;ghg_emissions&#xa;population" vertex="1">
+          <mxGeometry height="320" width="300" x="140" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-5" edge="1" parent="1" source="zI98GzpI6hRYiZCz9xg3-4" style="endArrow=block;startArrow=none;" target="zI98GzpI6hRYiZCz9xg3-1" />
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-6" edge="1" parent="1" source="zI98GzpI6hRYiZCz9xg3-4" style="endArrow=block;startArrow=none;" target="zI98GzpI6hRYiZCz9xg3-2" />
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-7" edge="1" parent="1" source="zI98GzpI6hRYiZCz9xg3-4" style="endArrow=block;startArrow=none;" target="zI98GzpI6hRYiZCz9xg3-3" />
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.007;entryY=0.583;entryDx=0;entryDy=0;entryPerimeter=0;" target="zI98GzpI6hRYiZCz9xg3-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="427" />
+            </Array>
+            <mxPoint x="650" y="460" as="sourcePoint" />
+            <mxPoint x="230" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zI98GzpI6hRYiZCz9xg3-12" edge="1" parent="1" source="zI98GzpI6hRYiZCz9xg3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="zI98GzpI6hRYiZCz9xg3-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="580" />
+              <mxPoint x="30" y="430" />
+              <mxPoint x="140" y="430" />
+            </Array>
+            <mxPoint x="88" y="463" as="sourcePoint" />
+            <mxPoint x="-120" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
